@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoria Nutricional - Nutricionista [Nome]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: #28a745;
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            text-align: center;
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Banner */
+        .banner {
+            height: 100vh;
+            background-image: url('banner.jpg'); /* Troque pela imagem desejada */
+            background-size: cover;
+            background-position: center;
+            color: rgb(15, 8, 8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .banner h2 {
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        /* Seção Sobre */
+        .about {
+            background-color: #ffffff;
+            padding: 50px;
+            text-align: center;
+            margin-top: -10px;
+        }
+
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Seção Serviços */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+
+        .service {
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .service:hover {
+            background-color: #218838;
+            transform: translateY(-10px);
+        }
+
+        .service h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .service a {
+            color: white;
+            text-decoration: none;
+            background-color: #6c757d;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .service a:hover {
+            background-color: #343a40;
+        }
+
+        /* Seção Depoimentos */
+        .testimonials {
+            background-color: #ffffff;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-cards {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .testimonial {
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .testimonial p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial h4 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        /* Seção Contato */
+        .contact {
+            background-color: #f4f4f9;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .contact button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact button:hover {
+            background-color: #218838;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Nutricionista [BEATRIZ]</h1>
+        <nav>
+            <a href="#about">Sobre</a>
+            <a href="#services">Serviços</a>
+            <a href="#testimonials">Depoimentos</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div>
+            <h2>Transforme sua vida com uma alimentação equilibrada!</h2>
+            <p>Consultoria nutricional personalizada para o seu bem-estar</p>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="about" class="about">
+        <h2>Sobre Mim</h2>
+        <p>Olá, sou [Nome], nutricionista especializada em nutrição clínica e esportiva. Meu objetivo é ajudá-lo a alcançar um estilo de vida saudável e sustentável, baseado em uma alimentação equilibrada e personalizada.</p>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="services" class="services">
+        <div class="service">
+            <h3>Consultoria Personalizada</h3>
+            <p>Adequação da alimentação às suas necessidades específicas.</p>
+            <a href="#">Saiba Mais</a>
+        </div>
+        <div class="service">
+            <h3>Plano Alimentar</h3>
+            <p>Elaboração de planos alimentares que atendem aos seus objetivos.</p>
+            <a href="#">Saiba Mais</a>
+        </div>
+        <div class="service">
+            <h3>Nutrição Esportiva</h3>
+            <p>Acompanhamento nutricional para atletas e praticantes de atividade física.</p>
+            <a href="#">Saiba Mais</a>
+        </div>
+    </section>
+
+    <!-- Seção Depoimentos -->
+    <section id="testimonials" class="testimonials">
+        <h2>O que dizem meus clientes</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial">
+                <p>"A consultoria foi fundamental para melhorar minha alimentação e performance. Recomendo!"</p>
+                <h4>João Silva</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Graças ao plano alimentar, consegui atingir meus objetivos de forma saudável. Amei!"</p>
+                <h4>Ana Souza</h4>
+            </div>
+            <div class="testimonial">
+                <p>"A nutrição esportiva me ajudou a melhorar meu rendimento nos treinos. Super indico!"</p>
+                <h4>Felipe Costa</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contact" class="contact">
+        <h2>Entre em Contato</h2>
+        <form>
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu e-mail" required>
+            <textarea placeholder="Sua mensagem" rows="4" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Nutricionista [Nome] | Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
